@@ -1,13 +1,14 @@
 import Link from "next/link";
+import ResearchForm from "@/components/ResearchForm";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-[radial-gradient(40rem_20rem_at_110%_-10%,rgba(59,130,246,0.15),transparent),radial-gradient(30rem_18rem_at_-10%_-10%,rgba(168,85,247,0.13),transparent)] dark:bg-[radial-gradient(40rem_20rem_at_110%_-10%,rgba(59,130,246,0.12),transparent),radial-gradient(30rem_18rem_at_-10%_-10%,rgba(168,85,247,0.10),transparent)]">
       {/* Header */}
       <header className="container mx-auto px-6 py-8">
         <nav className="flex items-center justify-between">
           <div className="text-2xl font-bold text-gray-900 dark:text-white">
-            MonApp
+            MarketSearch.ai
           </div>
           <div className="hidden md:flex space-x-8">
             <Link
@@ -29,9 +30,9 @@ export default function Home() {
               Contact
             </Link>
           </div>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors">
-            Commencer
-          </button>
+          <a href="#generate" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors">
+            Get Started
+          </a>
         </nav>
       </header>
 
@@ -39,23 +40,36 @@ export default function Home() {
       <main>
         <section className="container mx-auto px-6 py-20">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Bienvenue dans le futur
-              <span className="text-blue-600 block">de votre projet</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+              AI-Powered Market Research
+              <span className="text-blue-600 block">In Minutes, Not Weeks</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-              Une solution simple et élégante pour transformer vos idées en
-              réalité. Commencez dès aujourd&apos;hui et découvrez la
-              différence.
+              Generate an investor-grade market research report with GPT‑5-level analysis. Choose your industry, company, region, depth, and timeframe.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                Commencer gratuitement
-              </button>
-              <button className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                En savoir plus
-              </button>
+              <a href="#generate" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                Generate Your Report
+              </a>
+              <a href="#features" className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                Learn More
+              </a>
             </div>
+          </div>
+        </section>
+
+        {/* Generator Section */}
+        <section id="generate" className="container mx-auto px-6 pb-20">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                Generate a Market Research Report
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300">
+                Set your parameters and stream the full analysis in real time.
+              </p>
+            </div>
+            <ResearchForm />
           </div>
         </section>
 
@@ -64,7 +78,7 @@ export default function Home() {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Fonctionnalités principales
+               Why teams choose MarketSearch
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                 Tout ce dont vous avez besoin pour réussir, intégré dans une
@@ -89,11 +103,11 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Performance Ultra-rapide
+                   Analyst-Grade Output
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Optimisé pour la vitesse avec les dernières technologies
-                  modernes
+                   Structured reports with competitor deep dives, financials,
+                   segmentation, and strategy.
                 </p>
               </div>
               <div className="text-center p-6">
@@ -113,10 +127,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Sécurité Avancée
+                   Private & Secure
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Protection de niveau entreprise pour toutes vos données
+                   Your data stays private. We never train on your inputs.
                 </p>
               </div>
               <div className="text-center p-6">
@@ -136,10 +150,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Interface Intuitive
+                   Beautiful UX
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Design moderne et facile à utiliser pour tous les utilisateurs
+                   Elegant, fast, and designed for focus.
                 </p>
               </div>
             </div>
@@ -147,17 +161,16 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-blue-600 py-20">
+         <section className="bg-blue-600 py-20">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Prêt à commencer ?
+              Ready to get insights?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Rejoignez des milliers d&apos;utilisateurs qui font déjà confiance
-              à notre solution
+              Create your first market research report with one prompt.
             </p>
             <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              Démarrer maintenant
+              Generate now
             </button>
           </div>
         </section>
@@ -167,10 +180,10 @@ export default function Home() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-2xl font-bold mb-4">MonApp</div>
+             <div>
+              <div className="text-2xl font-bold mb-4">MarketSearch.ai</div>
               <p className="text-gray-400">
-                La solution moderne pour vos besoins digitaux.
+                Generate decision-grade market research with AI.
               </p>
             </div>
             <div>
@@ -234,8 +247,8 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 MonApp. Tous droits réservés.</p>
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>© {new Date().getFullYear()} MarketSearch.ai. All rights reserved.</p>
           </div>
         </div>
       </footer>
